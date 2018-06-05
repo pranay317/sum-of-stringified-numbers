@@ -35,7 +35,7 @@ function sumStrings(a, b) {
         sum.unshift(valToSum.join(''));
     }
     carryFwd > 0 ? sum.unshift(carryFwd) : ''
-    return sum.join('');
+    return sum.join('').replace(/^0+/, '');
 }
 
 console.log(sumStrings('1', '2'));
