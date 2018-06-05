@@ -31,7 +31,7 @@ function sumStrings(a, b) {
         let val = (parseInt(a[i]) + parseInt(b[i]) + carryFwd).toString();
         val = val.split('');
         const valToSum = val.splice(val.length - 1, 1);
-        carryFwd = val.length == 1 ? parseInt(val.join('')) : 0;
+        carryFwd = val.length >= 1 ? parseInt(val.join('')) : 0;
         sum.unshift(valToSum.join(''));
     }
     carryFwd > 0 ? sum.unshift(carryFwd) : ''
